@@ -2,23 +2,23 @@
 
 In the following, we briefly describe the different components that are included in this project.
 
-## Project Stucture
+## Project Structure
 
 The project includes the following files and folders:
 
-- __/annotation_app__: A folder that contains the annotation interface we created using `streamlit` library.
+- __/annotation_app__: A folder that contains the annotation interface we created using the `streamlit` library.
     - app.py: The main app file. You have to run this file after deploying the server. To run this file: `streamlit run app.py`.
-    - database.py: This file contains the db queries for inserting, updating or selecting various operations during the annotation period.
-    - test_db.py: This creates the samples dummy data for hosting it in the server. Run this file once before running `app.py`. 
-    - comments.csv: All comments that needs to be annotated.
+    - database.py: This file contains the db queries for inserting, updating, or selecting various operations during the annotation period.
+    - test_db.py: This creates the sample dummy data for hosting it on the server. Run this file once before running `app.py`. 
+    - comments.csv: All comments that need to be annotated.
     - issue_threads.csv: All issue threads that need to be annotated.
     - requirements.txt: the libraries needed to run the app.
 
 
 
 - __/dataset__: A folder that contains the annotated data.
-    - annoatated_issue_level.csv: csv file that contains the issue level annotation data. This file has 5 columns: `id`, `issue_id`, `trigger`, `target`, `consequences`.
-    - annoatated_comment_level.csv: csv file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, `comment_body`.
+    - annoatated_issue_level.csv: CSV file that contains the issue-level annotation data. This file has 5 columns: `id`, `issue_id`, `trigger`, `target`, and `consequences`.
+    - annoatated_comment_level.csv: CSV file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, and `comment_body`.
 
 
 ## Definitions
@@ -40,7 +40,7 @@ The project includes the following files and folders:
 
 **Entitlement**: expecting special privileges, attention, or resources without regard for the norms of collaboration and respect
 
-**Identity attack/Name-Calling**: Race, Religion, Nationality, Gender, Sexual-oriented, or any other kind of attacks and mean/offensive words directed at someone or a gorup of people
+**Identity attack/Name-Calling**: Race, Religion, Nationality, Gender, Sexual-oriented, or any other kind of attack and mean/offensive words directed at someone or a group of people
 
 ### Triggers:
 **Failed use of tool/code or error messages**: trouble with code/tool
@@ -55,7 +55,7 @@ The project includes the following files and folders:
 
 **Politics/ideology**: arising over politics or ideology differences (specific beliefs)
 
-**Technical disagreement**: have differing views on some technical component of the project
+**Technical disagreement**: have differing views on some technical components of the project
 
 **Unprovoked**: uncivil behavior or hostility occurs without an apparent reason or trigger
 
@@ -73,17 +73,17 @@ The project includes the following files and folders:
 ### Consequences:
 **Invoke Code of Conduct**: moderators/maintainers invoking CoC
 
-**Turning constructive**: after the uncivil comment, discussion becomes constructive (no more uncivil comments)
+**Turning constructive**: after the uncivil comment, the discussion becomes constructive (no more uncivil comments)
 
 **Escalating further**: more uncivil messages are exchanged after the first one
 
 **Discontinued further discussion**: no more messages are exchanged
 
-**Provided technical explanation**: provide technical explanations even after receiving uncivil comment
+**Provided technical explanation**: provide technical explanations even after receiving an uncivil comment
 
 **Accepting criticism**: they accept the criticisms instead of closing/locking the issue, or discontinuing further discussion
 
-**Trying to stop the incivility**: actively trying to put a stop to incivility, but not necessarily invoking Code of Conduct
+**Trying to stop the incivility**: actively trying to put a stop to incivility, but not necessarily invoking the Code of Conduct
 
 
 ## Samples of data:
