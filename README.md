@@ -11,6 +11,7 @@ The project includes the following files and folders:
     - database.py: This file contains the db queries for inserting, updating, or selecting various operations during the annotation period.
     - test_db.py: This creates the sample dummy data for hosting it on the server. Run this file once before running `app.py`. 
     - requirements.txt: The libraries needed to run the app.
+    - instructions.txt: The definitions of the TBDF, Trigger, Target and Consequence.
     - config.ini: The configuration file for different input files.
 
 
