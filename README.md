@@ -73,8 +73,8 @@ The project includes the following files and folders:
 
 - annotated_comment_level.csv file: 
 
-| id | issue_id | comment_id | tbdf      | comment_body      |
-|---|---------|---------|--------------|--------------|
-| 1 | 6209234 | 6209234 | None         | "I noticed that Prepared Statements ..." |
-| 2 | 6209234 | 7718792 | Entitlement | "Yes, prepared statements are on ..." |
-| 3 | 6209234 | 7722530 | None         | "The only downside with the SQL-based ..."|
+| id  | issue_id   | comment_id   | tbdf     | comment              |
+|----|-----------|-----------|-------------|----------------------|
+| 12 | 12894489  | 913845504 | Irony       | "Imagine thinking anyone cares about design flaws." |
+| 17 | 13258430  | 16461191  | None        | "Why do you close the issue?" |
+| 18 | 13258430  | 16461276  | Bitter frustration | "Because you don't offer a patch, and profanity really pisses me off." |
