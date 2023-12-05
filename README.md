@@ -14,8 +14,27 @@ The project includes the following files and folders:
     - issue_threads.csv: All issue threads that need to be annotated.
     - requirements.txt: the libraries needed to run the app.
 
-    
+
 
 - __/dataset__: A folder that contains the annotated data.
-    - annoatated_issue_level.csv: csv file that contains the issue level annotation data.
-    - annoatated_comment_level.csv: csv file that contains the comment level annotation data.
+    - annoatated_issue_level.csv: csv file that contains the issue level annotation data. This file has 5 columns: `id`, `issue_id`, `trigger`, `target`, `consequences`.
+    - annoatated_comment_level.csv: csv file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, `comment_body`.
+
+
+## Samples of data:
+
+- annoatated_issue_level.csv file: 
+
+| id | issue_id  | trigger | target | consequences |
+|---|------------|---------|--------------|------------------------------------------|
+| 1 | 774727384  | None    | People       | ['Provided technical explanation', 'Discontinued further discussion', 'Accepting criticism'] |
+| 2 | 654775761  | None    | People       | ['Discontinued further discussion']      |
+| 3 | 1418577350 | None    | Code/tool    | ['Escalating further']                   |
+
+- annotatated_comment_level.csv file: 
+
+| id | issue_id | comment_id | tbdf      | comment_body      |
+|---|---------|---------|--------------|--------------|
+| 1 | 6209234 | 6209234 | None         | "I noticed... |
+| 2 | 6209234 | 7718792 | Entitlement | "Yes, prepare... |
+| 3 | 6209234 | 7722530 | None         | "The only dow... |
