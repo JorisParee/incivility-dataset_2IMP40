@@ -35,6 +35,6 @@ The project includes the following files and folders:
 
 | id | issue_id | comment_id | tbdf      | comment_body      |
 |---|---------|---------|--------------|--------------|
-| 1 | 6209234 | 6209234 | None         | "I noticed... |
-| 2 | 6209234 | 7718792 | Entitlement | "Yes, prepare... |
-| 3 | 6209234 | 7722530 | None         | "The only dow... |
+| 1 | 6209234 | 6209234 | None         | "I noticed that Prepared Statements ..." |
+| 2 | 6209234 | 7718792 | Entitlement | "Yes, prepared statements are on ..." |
+| 3 | 6209234 | 7722530 | None         | "The only downside with the SQL-based ..."|
