@@ -10,15 +10,16 @@ The project includes the following files and folders:
     - app.py: The main app file. You have to run this file after deploying the server. To run this file: `streamlit run app.py`.
     - database.py: This file contains the db queries for inserting, updating, or selecting various operations during the annotation period.
     - test_db.py: This creates the sample dummy data for hosting it on the server. Run this file once before running `app.py`. 
-    - comments.csv: All comments that need to be annotated.
-    - issue_threads.csv: All issue threads that need to be annotated.
-    - requirements.txt: the libraries needed to run the app.
+    - requirements.txt: The libraries needed to run the app.
+    - config.ini: The configuration file for different input files.
 
 
 
 - __/dataset__: A folder that contains the annotated data.
-    - annoatated_issue_level.csv: CSV file that contains the issue-level annotation data. This file has 5 columns: `id`, `issue_id`, `trigger`, `target`, and `consequences`.
-    - annoatated_comment_level.csv: CSV file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, and `comment_body`.
+    - comments.csv: All comments that need to be annotated.
+    - issue_threads.csv: All issue threads that need to be annotated.
+    - annotated_issue_level.csv: CSV file that contains the issue-level annotation data. This file has 5 columns: `id`, `issue_id`, `trigger`, `target`, and `consequences`.
+    - annotated_comment_level.csv: CSV file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, and `comment_body`.
 
 
 ## Definitions
