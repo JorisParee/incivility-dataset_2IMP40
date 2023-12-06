@@ -15,7 +15,7 @@ The project includes the following files and folders:
     - requirements.txt: The libraries needed to run the app.
     - instructions.txt: The definitions of the TBDF, Trigger, Target and Consequence.
     - config.ini: The configuration file for different input files.
-    - - __/screenshot__: folder that contains screenshots of the annotation app in streamlit.
+    - - __/screenshots__: A folder that contains screenshots of the annotation app in streamlit.
 
 
 
