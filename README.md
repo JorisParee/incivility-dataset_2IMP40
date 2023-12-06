@@ -1,6 +1,8 @@
 # incivility-dataset
 
-In the following, we briefly describe the different components that are included in this project.
+The repository contains the collected heated issues and annotated data, focusing on identifying incivility in issue threads within GitHub open-source projects. Criteria for data selection included a minimum of 50 contributors, locked issues labeled as "too-heated," "off-topic," or "spam," and a timeframe from April 7, 2013, to October 24, 2023. Data was collected using the GitHub API and GH Archive, resulting in 338 instances labeled as "too-heated," 21 as "spam," and 33 as "off-topic." A custom annotation tool, built with Streamlit, facilitated the annotation process. The final annotated dataset comprises 5,961 issue comments, with 1,365 annotated with uncivil features. 
+
+In the following, we briefly describe the different components that are included in this repository.
 
 ## Project Structure
 
@@ -13,6 +15,7 @@ The project includes the following files and folders:
     - requirements.txt: The libraries needed to run the app.
     - instructions.txt: The definitions of the TBDF, Trigger, Target and Consequence.
     - config.ini: The configuration file for different input files.
+    - - __/screenshot__: folder that contains screenshots of the annotation app in streamlit.
 
 
 
