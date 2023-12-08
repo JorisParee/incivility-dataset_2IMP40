@@ -26,6 +26,7 @@ The project includes the following files and folders:
     - annotated_comment_level.csv: CSV file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, and `comment_body`.
 
 - GH_Archive_Query.sql: The SQL of the GH Archive we used for data collection.
+- openai_rating.ipynb: The Jupyter notebook where we run the GPT-4 prompts.
 
 ## Definitions
 
