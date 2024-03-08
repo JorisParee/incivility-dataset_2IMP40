@@ -3762,28 +3762,28 @@ In general, I think there are a lot of improvements that could be made to the en
 371,67171304,67171304,None,
 372,67171304,91518043,Mocking,very good feature :+1:
 373,67171304,209370249,None,+1 for this feature : )
-374,67171304,217405106,None,+1
-375,67171304,225381101,None,+1
-376,67171304,240836488,None,+1
-377,67171304,240975948,None,+1
-378,67171304,245510480,None,+1
+374,67171304,217405106,None,1
+375,67171304,225381101,None,1
+376,67171304,240836488,None,1
+377,67171304,240975948,None,1
+378,67171304,245510480,None,1
 379,67171304,248375944,Mocking,:+1: would definitely be useful.
 380,67171304,249586119,None,Is there and ETA for this?
 381,67171304,250920576,None,Not at the moment
-382,67171304,274344463,None,+1
-383,67171304,282194757,None,+1
-384,67171304,298319628,None,+1
-385,67171304,312899458,None,+1
+382,67171304,274344463,None,1
+383,67171304,282194757,None,1
+384,67171304,298319628,None,1
+385,67171304,312899458,None,1
 386,67171304,316742259,None,+1 extreamly important
-387,67171304,325488764,None,+1
-388,67171304,346844078,None,+1
-389,67171304,348563127,None,+1
-390,67171304,354258739,None,+1
-391,67171304,368341294,None,+1
-392,67171304,376025625,None,+1
-393,67171304,376080849,None,+1
-394,67171304,377442952,None,+1
-395,67171304,378294409,None,+1
+387,67171304,325488764,None,1
+388,67171304,346844078,None,1
+389,67171304,348563127,None,1
+390,67171304,354258739,None,1
+391,67171304,368341294,None,1
+392,67171304,376025625,None,1
+393,67171304,376080849,None,1
+394,67171304,377442952,None,1
+395,67171304,378294409,None,1
 396,67171304,378468869,None,when to achieve?
 397,67171304,383946536,None,@vkarpov15 : any progress on this?
 398,67171304,384628478,None,"Since there's still no support for this, I solved this by keeping a base model and exporting another schema to a separate file and then adding properties to it as needed.
@@ -3814,14 +3814,14 @@ myProp: {type: Number}
 module.exports = BaseModel.discriminator('SubModel', subModel);
 ```
 You create more sub models by creating more sub-schema factories."
-399,67171304,389914281,None,+1
-400,67171304,396814119,None,+1
-401,67171304,407966292,None,+1
-402,67171304,423973962,None,+1
-403,67171304,431799826,None,+1
-404,67171304,449780122,None,+1
-405,67171304,458991552,None,+1
-406,67171304,543097704,None,+1
+399,67171304,389914281,None,1
+400,67171304,396814119,None,1
+401,67171304,407966292,None,1
+402,67171304,423973962,None,1
+403,67171304,431799826,None,1
+404,67171304,449780122,None,1
+405,67171304,458991552,None,1
+406,67171304,543097704,None,1
 407,67171304,545230950,None,"I recently took the time to open source a solution to this issue, it's call [mongo-schematic-class](https://github.com/Omninox/SchematicClass). It allows you to use native ES6 classes (or function classes, if you prefer) and normal inheritance to define your schemas."
 408,67171304,576583300,Impatience,Any updates?
 409,74803435,74803435,None,"Example list: http://www.imdb.com/list/export?list_id=ls076157636&author_id=ur58869533p (CSV)
@@ -3835,7 +3835,7 @@ A new series will need a root folder, a profile, monitored state, a type (standa
 414,74803435,359136603,None,"I'd love to help out building this, but I got 0 experience with this project, and can't seem to make logic of radarr's version."
 415,74803435,370113082,None,"Same here, as Radarr can import Trakt lists I'd love to see this on Sonarr :)"
 416,74803435,375601692,None,I'd love to see this too!
-417,74803435,375859436,None,+1
+417,74803435,375859436,None,1
 418,74803435,385314688,None,"Works great on Radarr, would be awesome to get it at Sonarr. That would mean one place to select, and let Sonarr/Radarr read list, search, tag, download, done."
 419,74803435,385332166,None,Maybe through a Trakt integration using list feature? Analogue how it is done in Radarr.
 420,74803435,426938856,None,I started with Radarr and assumed Sonarr could parse your IMDB list for shows. I was a bit surprised to find out it couldn't so someone pointed me here to chime in and toss my hat into the vote. Though I see it has been 3 years so I am guessing it is not as easy to do. Still tossing in my vote :)
@@ -7002,10 +7002,10 @@ If not, you are losing a lot of power and will end up creating a lot of hacks. N
 1066,284999235,423873463,None,"+1 on implementing a ""when"" conditional."
 1067,284999235,426810904,Bitter frustration,soon-ish we approaching 1 y since this request was open and no progress so far ... any chance this get some attention @bcoca ? much thanks !
 1068,284999235,428493588,None,I would like to vote a '+1'as well.
-1069,284999235,428535951,None,+1
+1069,284999235,428535951,None,1
 1070,284999235,428584701,None,"+1 as well, would love to see this feature"
 1071,284999235,428587115,None,Please use the 👍 button to let the maintainers know you need this feature. Getting a ton of emails from these +1s.
-1072,284999235,429295401,None,+1
+1072,284999235,429295401,None,1
 1073,284999235,431035752,None,"If someone is interested how to use play-level variables for conditional playbook-import:
 1. Set up that variable as a fact in the play
 2. Use `when` with `import_playbook` to check this variable (with full path, `hostvars.hostname.a_variable`)
@@ -7162,7 +7162,7 @@ Specifically, the note mentions that Ansible allows `when` to work with playbook
 1092,284999235,575351947,Bitter frustration,"If only unfixed issues aged like fine wine instead of like bait fish....
 But seriously is this ever going to either be fixed or closed as won't fix? The `has_pr` label typically indicates at fix is being gestated, but in this case there is no hint as to where we should be looking for the fix."
 1093,284999235,575366695,None,My previous comment still stands as an answer to these questions. https://github.com/ansible/ansible/issues/34281#issuecomment-517328598
-1094,284999235,601657097,None,+1
+1094,284999235,601657097,None,1
 1095,284999235,605519148,None,"+1
 This is a frustrating ""missing feature"" Since there is no plan to allow for conditional vars_prompt, the only other way to conditionally get user input at start of playbook would be with conditional ""import_playbook"" based on whether a tag was sent in on commandline.
 `- import_playbook: playbook_choice_1.yml
@@ -7177,8 +7177,8 @@ https://youtu.be/WD2Oqy2oc3A"
 If these files are incorrect, please update the `component name` section of the description or use the `!component` bot command.
 [click here for bot help](https://github.com/ansible/ansibullbot/blob/master/ISSUE_HELP.md)
 <!--- boilerplate: components_banner --->"
-1098,284999235,646603277,None,+1
-1099,284999235,665843390,None,+1
+1098,284999235,646603277,None,1
+1099,284999235,665843390,None,1
 1100,284999235,665846985,None,"I've locked this to contributors for now. Adding `+1` comments is too noisy. For future reference, add a reaction to the issue body, and don't comment."
 1101,284999235,1079722773,None,"Thank you very much for your submission to Ansible. It means a lot to us that you've taken time to contribute.
 Unfortunately, this issue has been open for some time while waiting for a contributor to take it up but there does not seem to have been anyone that did so. So we are going to close this issue to clear up the queues and make it easier for contributors to browse possible implementation targets.
@@ -9585,14 +9585,14 @@ It has been few years and this feature has not yet been implemented. This was pr
 We have been informed that it was _planned_, but haven't heard anything since then..."
 1565,349736129,557466656,Bitter frustration,"@0Ky what also to say about it other than ""it's planned, look at the [roadmap](https://tutanota.com/roadmap/)""?
 Please take into account that some things from top of it are already implemented and are either in beta or about to be released"
-1566,349736129,560109001,None,+1
+1566,349736129,560109001,None,1
 1567,349736129,564969333,None,+1! Feature in demand!
 1568,349736129,566886031,None,+1 Essential!
 1569,349736129,570749008,None,"+1, coming from a reddit topic where this was linked as the fix for the isolation of aliases being used as login alternatives from the main mail."
 1570,349736129,571423281,None,"+1 actually this does matter, the alias is only practical at the moment if the account-level display name is removed entirely or set to something bland."
 1571,349736129,583447768,None,What is the status? This is is really need for almost everybody to use their Tutanota account. It has been open for a year and a half.
 1572,349736129,583627817,Bitter frustration,I'm honestly baffled that this isn't in yet. Tutanota must not understand how important this feature is for business use.
-1573,349736129,583839350,None,+1
+1573,349736129,583839350,None,1
 1574,349736129,589949764,Bitter frustration,"I am also really in need of this feature, since I need my aliases to be confidential (not containing my name and surname). Changing back and forth is ridiculous."
 1575,349736129,602017701,None,What does it take from a technical/developer perspective to implement this feature and thus solve the issue?
 1576,349736129,602097203,None,Basically nothing for the backend. The more difficult part is making the user interface for it.
@@ -9614,7 +9614,7 @@ I hope you get to this soon. For months I have been switching my ""Sender Name""
 1582,349736129,655673154,None,Me too is desperate for this feature. I can't get it together. It's a part of privacy in general. But also in just simple daily use. For example: In some official mail I want to use my first and last name. In private mail just my first name.
 1583,349736129,691474681,None,Another 1+ for this feature. Looking forward to when it is introduced. Until then I wont be able to use my real name on this service as I always go by my internet pseudonym wherever I sign up.
 1584,349736129,703955391,Bitter frustration,"2 years and no progress, and they are making useless features like calendar. This and crypto payment are far more important than that."
-1585,349736129,722634739,None,+1
+1585,349736129,722634739,None,1
 1586,349736129,726562723,None,"I've spent 1 hour looking for a way to change sender name according to alias. I've been thinking ""it MUST be somewhere"". Then I gave up, googled it and... here I am with my + 1."
 1587,349736129,727293970,None,This is a big problem. Please prioritize this.
 1588,349736129,727294084,None,Seconded. It boggles my mind that this hasn't been added yet.
@@ -11660,7 +11660,7 @@ Or something like this if we want it as another field:
 Link: https://strapi.io/documentation/1.x.x/models.html#autoincrement
 I suppose this is no more a part of the current version.
 Any way to add it back?"
-1936,407645854,618680493,None,+1
+1936,407645854,618680493,None,1
 1937,407645854,1119825737,None,"Hey all, we are currently moving many feature requests to our new feedback and feature request website to help clean up the GitHub issues and make it easier for us to review bug reports and fix them.
 I have moved this feature to the following URL: https://feedback.strapi.io/developer-experience/p/add-auto-increment-option-to-the-model-attributes
 If you are interested in this feature please feel free to go there and add more comments and/or upvote it there.
@@ -29225,14 +29225,14 @@ $.post(`http://${GetParentResourceName()}/OnNuiReady`);
 [ 183015] [b2545_GTAProce] MainThrd/ at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00032] in <74fbbe963b7e417b8d715b858c5c584f>:0 [ 183015] [b2545_GTAProce] MainThrd/ --- End of inner exception stack trace ---
 [ 183015] [b2545_GTAProce] MainThrd/ at System.Reflection.MonoMethod.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00048] in <74fbbe963b7e417b8d715b858c5c584f>:0 [ 183015] [b2545_GTAProce] MainThrd/ at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <74fbbe963b7e417b8d715b858c5c584f>:0 [ 183015] [b2545_GTAProce] MainThrd/ at System.Delegate.DynamicInvokeImpl (System.Object[] args) [0x000e7] in <74fbbe963b7e417b8d715b858c5c584f>:0 [ 183015] [b2545_GTAProce] MainThrd/ at System.MulticastDelegate.DynamicInvokeImpl (System.Object[] args) [0x00008] in <74fbbe963b7e417b8d715b858c5c584f>:0 [ 183015] [b2545_GTAProce] MainThrd/ at System.Delegate.DynamicInvoke (System.Object[] args) [0x00000] in <74fbbe963b7e417b8d715b858c5c584f>:0 [ 183015] [b2545_GTAProce] MainThrd/ at CitizenFX.Core.EventHandlerEntry+<Invoke>d__5.MoveNext () [0x00064] in C:\gl\builds\master\fivem\code\client\clrcore\EventHandlerDictionary.cs:107
 ```"
-4971,1273536453,1160786589,None,Disable patches until this error disappears to find the patch which causes this.
-4972,1273536453,1171015167,None,Still continuing
-4973,1273536453,1171015464,None,To reset
-4974,1273536453,1179568445,Impatience,"??
+4971,2044991743,1160786589,None,Disable patches until this error disappears to find the patch which causes this.
+4972,2044991743,1171015167,None,Still continuing
+4973,2044991743,1171015464,None,To reset
+4974,2044991743,1179568445,Impatience,"??
 Same problem still facing..."
-4975,1273536453,1179568566,Entitlement,"> Disable patches until this error disappears to find the patch which causes this.
+4975,2044991743,1179568566,Entitlement,"> Disable patches until this error disappears to find the patch which causes this.
 Do as suggested."
-4976,1273536453,1273536453,None,"Check this video :
+4976,2044991743,2044991743,None,"Check this video :
 https://user-images.githubusercontent.com/69076256/174075680-2bdd96a6-5624-4bbb-bb71-afc5cfe79b6c.mp4"
 4977,1278268505,1161632452,None,You can play around with different output stream redirections. `grep -v` also works quite well to remove single lines I heard.
 4978,1278268505,1243013766,Bitter frustration,How can I remove this nonsense?
@@ -29825,23 +29825,23 @@ Steps to reproduce the behavior: make sure story mode is enabled and attempt to 
 Expected behavior: the script will run as usual and produce a final video.
 - Python Version: 3.9
 - App version / Branch: 2.2.9"
-5109,1301947200,1181690373,None,I have tried it but this did not work for me.
-5110,1301947200,1181693530,None,"> I have tried it but this did not work for me.
+5109,2044991737,1181690373,None,I have tried it but this did not work for me.
+5110,2044991737,1181693530,None,"> I have tried it but this did not work for me.
 It working flawlessly for me.
 Are you sure you have tested it on a video that automatically activates the captions? Otherwise nothing changes."
-5111,1301947200,1181708644,None,Can you send one?
-5112,1301947200,1181711693,None,"> Can you send one?
+5111,2044991737,1181708644,None,Can you send one?
+5112,2044991737,1181711693,None,"> Can you send one?
 Already done in private, but it doesn't seem to work for everyone.
 In any case, I'll try again:
 The videos of this channel contains auto-captions:
 https://youtu.be/NkHH4LX_kRg"
-5113,1301947200,1181712911,None,"And this channel too:
+5113,2044991737,1181712911,None,"And this channel too:
 https://youtu.be/3F5cV98isaY"
-5114,1301947200,1181714660,None,Works.
-5115,1301947200,1181720035,None,"> Works.
+5114,2044991737,1181714660,None,Works.
+5115,2044991737,1181720035,None,"> Works.
 Would have been very weird if it only worked on my device xD"
-5116,1301947200,1181821927,None,What is that code? Thats not referring to our Patcher?
-5117,1301947200,1181824577,None,"> What is that code? Thats not referring to our Patcher?
+5116,2044991737,1181821927,None,What is that code? Thats not referring to our Patcher?
+5117,2044991737,1181824577,None,"> What is that code? Thats not referring to our Patcher?
 This is code from my C# patcher.
 I hate kotlin for various reason, first of all my inability to write a patch.
 You can adapt the code if you want.
@@ -29853,7 +29853,7 @@ const/4 v0, 0x1
 return v0
 :cond_disableinitcaption
 ```"
-5118,1301947200,1181829238,None,"> > What is that code? Thats not referring to our Patcher?
+5118,2044991737,1181829238,None,"> > What is that code? Thats not referring to our Patcher?
 > > This is code from my C# patcher.
 > > I hate kotlin for various reason, first of all my inability to write a patch.
 > > You can adapt the code if you want.
@@ -29866,7 +29866,7 @@ return v0
 > :cond_disableinitcaption
 > ```
 So thats the same which vanced did, so we would have done this anyway, but thanks for helping us out :)"
-5119,1301947200,1181830613,None,"> > > What is that code? Thats not referring to our Patcher?
+5119,2044991737,1181830613,None,"> > > What is that code? Thats not referring to our Patcher?
 > > > > > > This is code from my C# patcher.
 > > I hate kotlin for various reason, first of all my inability to write a patch.
 > > You can adapt the code if you want.
@@ -29881,63 +29881,63 @@ So thats the same which vanced did, so we would have done this anyway, but thank
 > > So thats the same which vanced did, so we would have done this anyway, but thanks for helping us out :)
 Nope... This was deprecated starting from vanced 15.xx, despite Vanced Team keep the reference inside settings.
 The proof is there's no patch like that on Vanced 17.03.38."
-5120,1301947200,1189155844,None,This would be way easier if you would actually provide class and method names :)
-5121,1301947200,1189183307,None,"> This would be way easier if you would actually provide class and method names :)
+5120,2044991737,1189155844,None,This would be way easier if you would actually provide class and method names :)
+5121,2044991737,1189183307,None,"> This would be way easier if you would actually provide class and method names :)
 Based on which version?"
-5122,1301947200,1189187235,None,The one from the docs
-5123,1301947200,1189215881,None,"> This would be way easier if you would actually provide class and method names :)
+5122,2044991737,1189187235,None,The one from the docs
+5123,2044991737,1189215881,None,"> This would be way easier if you would actually provide class and method names :)
 17.27.39 --->
 First reference: {method: `public final void d`, class: `aamt.smali`}
 Second reference: {method: `public final void D`, class: `SubtitleButtonController.smali`}
 Third reference: {method: `public final boolean t`, class: `SubtitleTrack.smali`}"
-5124,1301947200,1189217911,None,"Thanks, I can work with that now :)"
-5125,1301947200,1191659266,None,Patch is not possible to create. Theres no way to generate a safe fingerprint for class aamt.
-5126,1301947200,1191687004,None,"Not required, you can create a parent fingerprint for a different method which references this one and use the method walker."
-5127,1301947200,1191687793,None,"> Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
+5124,2044991737,1189217911,None,"Thanks, I can work with that now :)"
+5125,2044991737,1191659266,None,Patch is not possible to create. Theres no way to generate a safe fingerprint for class aamt.
+5126,2044991737,1191687004,None,"Not required, you can create a parent fingerprint for a different method which references this one and use the method walker."
+5127,2044991737,1191687793,None,"> Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
 not possible. Those methods have no usages. Thats at least what jadx says."
-5128,1301947200,1191702527,None,"> > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
+5128,2044991737,1191702527,None,"> > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
 > > not possible. Those methods have no usages. Thats at least what jadx says.
 Searching for string:
 ""pc"""
-5129,1301947200,1191703937,None,"And after searching for method ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;"""
-5130,1301947200,1191706153,None,"Anyway...I posted the PoC for a reason.
+5129,2044991737,1191703937,None,"And after searching for method ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;"""
+5130,2044991737,1191706153,None,"Anyway...I posted the PoC for a reason.
 All these infos was already listed there."
-5131,1301947200,1191717800,None,"> And after searching for method > > ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;""
+5131,2044991737,1191717800,None,"> And after searching for method > > ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;""
 Returns 0 results."
-5132,1301947200,1191718991,None,"> > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
+5132,2044991737,1191718991,None,"> > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
 > > not possible. Those methods have no usages. Thats at least what jadx says.
 The class has, and since the class has you can get it from a parent method."
-5133,1301947200,1191719680,None,"> > And after searching for method
+5133,2044991737,1191719680,None,"> > And after searching for method
 > > ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;""
 > > Returns 0 results.
 Instead this returns me, on my patcher at least, a method with the aformentioned variables. 🤷‍♂️"
-5134,1301947200,1191719741,None,"> > > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
+5134,2044991737,1191719741,None,"> > > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
 > > > > not possible. Those methods have no usages. Thats at least what jadx says.
 > > Searching for string:
 > > ""pc""
 ""pc"" is not contained in the class"
-5135,1301947200,1191720454,None,"> The class has, and since the class has you can get it from a parent method.
+5135,2044991737,1191720454,None,"> The class has, and since the class has you can get it from a parent method.
 I'll check again tomorrow then"
-5136,1301947200,1191728307,None,"> > > > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
+5136,2044991737,1191728307,None,"> > > > Not required, you can create a parent fingerprint for a different method which references this one and use the method walker.
 > > > > > > > > > not possible. Those methods have no usages. Thats at least what jadx says.
 > > > > > > Searching for string:
 > > ""pc""
 > > ""pc"" is not contained in the class
 LOL
 <img width=""629"" alt=""Immagine 2022-07-21 190032"" src=""https://user-images.githubusercontent.com/108184954/180271651-c33a5395-c625-4d40-b63a-5479c935e7d0.png"">"
-5137,1301947200,1191729152,None,"> > > And after searching for method
+5137,2044991737,1191729152,None,"> > > And after searching for method
 > > > ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;""
 > > > > Returns 0 results.
 > > Instead this returns me, on my patcher at least, a method with the aformentioned variables. 🤷‍♂️
 Open jadx, go to mentioned class, open smali view, Ctrl+f, search, and find nothing. Your patcher is not revanced. So We have to find a working way."
-5138,1301947200,1191730541,None,"> > > > And after searching for method
+5138,2044991737,1191730541,None,"> > > > And after searching for method
 > > > > ""(Lcom/google/android/libraries/youtube/innertube/model/player/PlayerResponseModel;Lcom/google/android/libraries/youtube/player/model/PlaybackStartDescriptor;""
 > > > > > > > > > Returns 0 results.
 > > > > > > Instead this returns me, on my patcher at least, a method with the aformentioned variables. 🤷‍♂️
 > > Open jadx, go to mentioned class, open smali view, Ctrl+f, search, and find nothing. Your patcher is not revanced. So We have to find a working way.
 Already done.
 You can see the screenshot in the answer preceding yours."
-5139,1301947200,1301947200,None,"## 🐞 Issue
+5139,2044991737,2044991737,None,"## 🐞 Issue
 YouTube turn on captions (chosen based on the current region) automatically at the beginning of some videos.
 ## ❗ Solution
 Adapt the following POC to ReVanced patches:
@@ -30934,23 +30934,23 @@ have done that too ) because it fails miserably (as it already exists)
 3. even postgres assumes it is present 4. it has a behaviour that no user-defined schema has (i.e omitting the name of the schema default to 'public' , i.e when you do `CREATE TABLE foobar` you're actually doing `CREATE TABLE public.foobar` 5. if a ill-advised user drop it, a lot of libraries get broken ( doctrine migration by default create is own internal table in the public namespace , so as this SQL runs *BEFORE* the first migration, you can't even create back `public` in the first migration as it will fail before)
 6. weak argument: after 10 years of managing postgresql I never ever seen people dropping and even less (re)creating the public schema, the only case I could hypothetically see for it is a extremly ordered DBA that have severa applications on the same instance , and want each of them in its own schema to ease maintenance (but in that case it's the ""infrastrcture"" responsability to drop it once and for all, not one of the applications )
 @morozov I understand the issue is ""scary"" because this library is a high profile one and after a time even bugs become part of the API , so I understand we may want to be careful on that one, so maybe we can find a deprecation strategy and changing this behaviour only on a minor/major release (at least not just a bug fix one)"
-5321,1346088769,1222299708,None,The exception is unrelated but wide searchbar indeed does not work.
-5322,1346088769,1222377250,None,"I am having the same issue when buidling with v2.41.0.
+5321,2044991734,1222299708,None,The exception is unrelated but wide searchbar indeed does not work.
+5322,2044991734,1222377250,None,"I am having the same issue when buidling with v2.41.0.
 Downgraded to my build with v2.39.1 and everything works fine there."
-5323,1346088769,1222397346,None,"> The exception is unrelated
+5323,2044991734,1222397346,None,"> The exception is unrelated
 yep, i missed, sorry.
 But as i see there is no log messages in wide searchbar patch
 > Downgraded to my build with v2.39.1 and everything works fine there.
 Not working for me"
-5324,1346088769,1223071128,None,"> Not working for me
+5324,2044991734,1223071128,None,"> Not working for me
 Try Version v17.32.38(Stable) with Patches 2.39.1."
-5325,1346088769,1223608490,Bitter frustration,"> Try Version v17.32.38(Stable) with Patches 2.39.1.
+5325,2044991734,1223608490,Bitter frustration,"> Try Version v17.32.38(Stable) with Patches 2.39.1.
 Hm, same, not working."
-5326,1346088769,1225980269,None,"I have this issue also.
+5326,2044991734,1225980269,None,"I have this issue also.
 YT v17.32.35
 Patch 2.42.0"
-5327,1346088769,1233451240,None,Fixed.
-5328,1346088769,1346088769,None,"### Type
+5327,2044991734,1233451240,None,Fixed.
+5328,2044991734,2044991734,None,"### Type
 Cosmetic
 ### Bug description
 wide searchbar can't be enabled.
@@ -31755,18 +31755,18 @@ oh no my pc crashed i thINk it were teh maliciouz repository (i thinked thiz wer
 5615,1414333398,1283472727,Mocking,I DOAN FEELZ SAFE AUTHENTICATIN MAH MICROSOFT AKOWNT IN DIS PROJECT
 5616,1414333398,1283494345,None,"This is a launcher made by the non-corrupt Devs of PolyMC, as a successor to PolyMC. It crashed most likely because it is still dev builds, it's not ready for the public quite yet."
 5617,1414333398,1414333398,None,
-5618,1414476730,1287770289,None,"Definetly, i'm getting sick because of that. I need to apply speed everytime when i want to change video."
-5619,1414476730,1287771245,None,Closed because Acknowledgements not met.
-5620,1414476730,1287771631,None,"![Screenshot_2022-10-22-13-57-50-35_3aea4af51f236e4932235fdada7d1643](https://user-images.githubusercontent.com/13122796/197337721-54ebb4c3-a5af-4f62-ab3b-0ba596698e74.jpg)
+5618,2040759060,1287770289,None,"Definetly, i'm getting sick because of that. I need to apply speed everytime when i want to change video."
+5619,2040759060,1287771245,None,Closed because Acknowledgements not met.
+5620,2040759060,1287771631,None,"![Screenshot_2022-10-22-13-57-50-35_3aea4af51f236e4932235fdada7d1643](https://user-images.githubusercontent.com/13122796/197337721-54ebb4c3-a5af-4f62-ab3b-0ba596698e74.jpg)
 https://github.com/orgs/revanced/discussions/269"
-5621,1414476730,1287772939,None,I'll open this issue in favour of closing the discussion so it is moved here.
-5622,1414476730,1295888088,None,im sry but can somebody tell me wht the status of this feature request is??? ive gone through previous posts and saw tht similar issue was closed as not planned...please give some clarity as to whether this feature will be implemented or not
-5623,1414476730,1304800494,Impatience,This is much needed? Why cant anyone make this
-5624,1414476730,1312356011,Impatience,Can we PLEASE get this!!
-5625,1414476730,1317869046,None,"It is not easy to help, because developing a patch usually is not collaborative. Vanced's implementation is different from what it will be on ReVanced, both in the implementation and usage. The behavior will be similar to the `remember-video-quality` patch with a switch to lock to the current speed. Additionally the implementation of the code has to be refactored from the ground up as just porting over Vanced's implementation will cause implications with readabity and maintainability in the future."
-5626,1414476730,1344722919,None,"We have to expect the current or better code quality, otherwise it will cause implications with readabity and maintainability in the future as previously said."
-5627,1414476730,1374434644,None,https://github.com/revanced/revanced-integrations/commit/eea37a9bada6c843275236fa232bfe497d178b17
-5628,1414476730,1414476730,None,"### Application
+5621,2040759060,1287772939,None,I'll open this issue in favour of closing the discussion so it is moved here.
+5622,2040759060,1295888088,None,im sry but can somebody tell me wht the status of this feature request is??? ive gone through previous posts and saw tht similar issue was closed as not planned...please give some clarity as to whether this feature will be implemented or not
+5623,2040759060,1304800494,Impatience,This is much needed? Why cant anyone make this
+5624,2040759060,1312356011,Impatience,Can we PLEASE get this!!
+5625,2040759060,1317869046,None,"It is not easy to help, because developing a patch usually is not collaborative. Vanced's implementation is different from what it will be on ReVanced, both in the implementation and usage. The behavior will be similar to the `remember-video-quality` patch with a switch to lock to the current speed. Additionally the implementation of the code has to be refactored from the ground up as just porting over Vanced's implementation will cause implications with readabity and maintainability in the future."
+5626,2040759060,1344722919,None,"We have to expect the current or better code quality, otherwise it will cause implications with readabity and maintainability in the future as previously said."
+5627,2040759060,1374434644,None,https://github.com/revanced/revanced-integrations/commit/eea37a9bada6c843275236fa232bfe497d178b17
+5628,2040759060,2040759060,None,"### Application
 Youtube ReVanced
 ### Issue
 When i change video it defaults playback speed to 1x
@@ -31778,32 +31778,32 @@ It was already available on vanced. So it would be nice with revanced too.
 - [x] I have searched the existing issues and this is a new and no duplicate or related to another open issue.
 - [X] I have written a short but informative title.
 - [X] I filled out all of the requested information in this issue properly."
-5629,1417883451,1286566785,None,"where tf did it find line 38 in HideCreateButtonPatch.java?
+5629,2044991710,1286566785,None,"where tf did it find line 38 in HideCreateButtonPatch.java?
 https://github.com/revanced/revanced-integrations/blob/main/app/src/main/java/app/revanced/integrations/patches/HideCreateButtonPatch.java"
-5630,1417883451,1286566789,None,"> where tf did it find line 38 in HideCreateButtonPatch.java? https://github.com/revanced/revanced-integrations/blob/main/app/src/main/java/app/revanced/integrations/patches/HideCreateButtonPatch.java
+5630,2044991710,1286566789,None,"> where tf did it find line 38 in HideCreateButtonPatch.java? https://github.com/revanced/revanced-integrations/blob/main/app/src/main/java/app/revanced/integrations/patches/HideCreateButtonPatch.java
 line 38 in compiled java code, not source code."
-5631,1417883451,1286566795,None,Are you patching a compatible version of the app?
-5632,1417883451,1286566798,None,Also which patches version was the last time it worked?
-5633,1417883451,1286581760,None,"I am having the same problem revanced crashes at start, I have included hides created button patch and have patched with the compatible version 17.36.37 , built using revanced builder on termux."
-5634,1417883451,1286642922,None,"> Are you patching a compatible version of the app?
+5631,2044991710,1286566795,None,Are you patching a compatible version of the app?
+5632,2044991710,1286566798,None,Also which patches version was the last time it worked?
+5633,2044991710,1286581760,None,"I am having the same problem revanced crashes at start, I have included hides created button patch and have patched with the compatible version 17.36.37 , built using revanced builder on termux."
+5634,2044991710,1286642922,None,"> Are you patching a compatible version of the app?
 yes, 17.36.37
 > Also which patches version was the last time it worked?
 I usually choose all patches except microg, hide cast button, theme, premium banner and debugging. if I also choose hide create button, it crashes; if not, it works
 if ur asking about version, I have no idea, I use reisxd's revanced builder and i didn't care much"
-5635,1417883451,1286650171,None,I guess it's 2.83 because I don't remember I chose hide mix patch
-5636,1417883451,1286658752,None,"@old4error exclude all patches except for the failing patch, if it doesn't fail, report back with the patch which conflicts and causes it to fail"
-5637,1417883451,1286695636,None,"Having the same issue, same error message, only happens on root install, but for some reason unrooted works fine."
-5638,1417883451,1286698765,None,"unroot version 17.36.37 patches 2.85 cli 2.14 integr. 0.54:
+5635,2044991710,1286650171,None,I guess it's 2.83 because I don't remember I chose hide mix patch
+5636,2044991710,1286658752,None,"@old4error exclude all patches except for the failing patch, if it doesn't fail, report back with the patch which conflicts and causes it to fail"
+5637,2044991710,1286695636,None,"Having the same issue, same error message, only happens on root install, but for some reason unrooted works fine."
+5638,2044991710,1286698765,None,"unroot version 17.36.37 patches 2.85 cli 2.14 integr. 0.54:
 no crash without hide-create-button patch, also there is no create button (when logged out) when logged in - crash
 root version, same versions as above: included all patches (except hide-cast and microg for root build) except hide-create-button patch: no crash; with hide-create-button patch - crash"
-5639,1417883451,1286701838,None,"> unroot version 17.36.37 patches 2.85 cli 2.14 integr. 0.54: no crash without hide-create-button patch, also there is no create button (when logged out) when logged in - crash root version, same versions as above: included all patches (except hide-cast and microg for root build) except hide-create-button patch: no crash; with hide-create-button patch - crash
+5639,2044991710,1286701838,None,"> unroot version 17.36.37 patches 2.85 cli 2.14 integr. 0.54: no crash without hide-create-button patch, also there is no create button (when logged out) when logged in - crash root version, same versions as above: included all patches (except hide-cast and microg for root build) except hide-create-button patch: no crash; with hide-create-button patch - crash
 Also having the same results here, seems as having the create button appear is causing the crash which is odd, because I don't think anythings changed with that patch."
-5640,1417883451,1286705353,None,"Root or not does not change the patch process, please record as mentioned."
-5641,1417883451,1286707021,None,"root version 17.36.37 patches 2.85 cli 2.14 integr. 0.54:
+5640,2044991710,1286705353,None,"Root or not does not change the patch process, please record as mentioned."
+5641,2044991710,1286707021,None,"root version 17.36.37 patches 2.85 cli 2.14 integr. 0.54:
 included all patches except hide-create-button patch: no crash; with hide-create-button patch - crash"
-5642,1417883451,1286710341,None,if including only hide-create-button patch - no crash
-5643,1417883451,1286713996,None,Find and report back with the patch which conflicts with the patch.
-5644,1417883451,1286767652,None,"If it helps, everything worked fine with 2.83.2 with the following patches on 17.36.37 built using revanced builder on termux-
+5642,2044991710,1286710341,None,if including only hide-create-button patch - no crash
+5643,2044991710,1286713996,None,Find and report back with the patch which conflicts with the patch.
+5644,2044991710,1286767652,None,"If it helps, everything worked fine with 2.83.2 with the following patches on 17.36.37 built using revanced builder on termux-
 > hide-shorts-button
 > hide-create-button
 > disable-startup-shorts-player
@@ -31830,10 +31830,10 @@ included all patches except hide-create-button patch: no crash; with hide-create
 > minimized-playback
 > custom-playback-speed
 Seeing the recent versions having changes only to video-ads I tried coupling video-ads and hide create button and built using the latest patches but that worked fine to my surprise."
-5645,1417883451,1286856746,None,I can confirm crash when hide-create-button patch is selected.
-5646,1417883451,1286978298,None,"> Find and report back with the patch which conflicts with the patch.
+5645,2044991710,1286856746,None,I can confirm crash when hide-create-button patch is selected.
+5646,2044991710,1286978298,None,"> Find and report back with the patch which conflicts with the patch.
 The hide-shorts-button and hide-create button patches together are the patches that cause the startup crash on version 17.36.37 (at least on my end)."
-5647,1417883451,1287000486,None,"Can confirm the same issue with patches v2.85.1, root, compiled excluding microg-support
+5647,2044991710,1287000486,None,"Can confirm the same issue with patches v2.85.1, root, compiled excluding microg-support
 ```
 10-21 15:50:24.697 27626 27626 D AndroidRuntime: >>>>>> START com.android.internal.os.RuntimeInit uid 0 <<<<<<
 10-21 15:50:24.700 27626 27626 I AndroidRuntime: Using default boot image
@@ -31896,10 +31896,10 @@ The hide-shorts-button and hide-create button patches together are the patches t
 10-21 15:50:31.008 27891 27891 D AndroidRuntime: Calling main entry com.android.commands.content.Content
 10-21 15:50:31.089 27891 27891 D AndroidRuntime: Shutting down VM
 ```"
-5648,1417883451,1287005939,None,"yep, same crash as @epic0421's. hide-shorts-button + hide-create-button = startup crush"
-5649,1417883451,1287007656,None,hide-shorts-button doesn't seem to cause any issues for me
-5650,1417883451,1294146598,None,Fixed.
-5651,1417883451,1417883451,None,"### Type
+5648,2044991710,1287005939,None,"yep, same crash as @epic0421's. hide-shorts-button + hide-create-button = startup crush"
+5649,2044991710,1287007656,None,hide-shorts-button doesn't seem to cause any issues for me
+5650,2044991710,1294146598,None,Fixed.
+5651,2044991710,2044991710,None,"### Type
 Other
 ### Bug description
 hide create button causes crash at startup. tested and confirmed in log
@@ -32264,12 +32264,12 @@ I proposed contributing guidelines in pull request #2892 and it seems like curre
 I will also note complete lack of fact checking upon merging, just ""I tested it"" should not be a reason to believe that any testing was actually performed, no replays were provided, no people who testing were performed with commented on a thread, nothing.
 As of my part, I am trying to remain neutral on all the changes except obvious trash. It is clearly been established that my opinion and opinion of anyone else complaining about how breaking proposed changes are just being ignored or dismissed with same phrase ""we tested it"" with lack of fact checking.
 Lately I got very busy in university and I can not test stuff myself but at the same time I do not claim that I performed any of them nor do I keep up with all the written arguments so my role here is only to filter out the obvious."
-5683,1419674255,1288057656,None,"I get this on all videos, not just a 1/4 of them. Also in the UK. I also use the work around, where i skip the video to the end and press repeat."
-5684,1419674255,1288065339,None,Closer to 75% of vids
-5685,1419674255,1288086400,None,I wonder if this is related to which isp and then what YouTube server you hit as they are rolling out these changes? swapping region using the VPN instantly fixes is but I'm going to imagine that will only work until YT do a full rollout of changes?
-5686,1419674255,1288094398,None,"I'm also experiencing this, most videos refuse to play the first time"
-5687,1419674255,1288145418,None,"can confirm this is still happening for me, using revanced patch 2.85.2 on youtube 17.36.37"
-5688,1419674255,1288155006,None,"Tried to narrow down the issue.
+5683,2044991706,1288057656,None,"I get this on all videos, not just a 1/4 of them. Also in the UK. I also use the work around, where i skip the video to the end and press repeat."
+5684,2044991706,1288065339,None,Closer to 75% of vids
+5685,2044991706,1288086400,None,I wonder if this is related to which isp and then what YouTube server you hit as they are rolling out these changes? swapping region using the VPN instantly fixes is but I'm going to imagine that will only work until YT do a full rollout of changes?
+5686,2044991706,1288094398,None,"I'm also experiencing this, most videos refuse to play the first time"
+5687,2044991706,1288145418,None,"can confirm this is still happening for me, using revanced patch 2.85.2 on youtube 17.36.37"
+5688,2044991706,1288155006,None,"Tried to narrow down the issue.
 Software versions:
 Android: 8
 Youtube: 17.36.37
@@ -32281,21 +32281,21 @@ Using only that patch i had the issue. Some maybe relevant observations:
 If an Ad played at the start of the video, the rest of the video always played fine.
 If an Ad didn't play at the start of the video, the problem seems to be a bit random. But you can tell it is going to happen if it stops loading the video. It will only play the first 10 seconds then start the infinite spinning. If you see another chunk of the video get loaded, it will be fine.
 If you can see that it isn't loading any more video after the first 10 seconds and pause it at the 9 second mark, you can leave it a long time, and it still won't load any more of the video."
-5689,1419674255,1288157936,None,The ad has nothing to do with the device. It is a regional A/B issue.
-5690,1419674255,1288163833,Vulgarity,"UK here also get this issue, manual installed perfectly multiple times, many versions. always happens. will try us VPN and let you know if it works but It's on every video, some will load 5s then stop:/ fucking awful"
-5691,1419674255,1289516921,None,"Same problem...also in the UK!
+5689,2044991706,1288157936,None,The ad has nothing to do with the device. It is a regional A/B issue.
+5690,2044991706,1288163833,Vulgarity,"UK here also get this issue, manual installed perfectly multiple times, many versions. always happens. will try us VPN and let you know if it works but It's on every video, some will load 5s then stop:/ fucking awful"
+5691,2044991706,1289516921,None,"Same problem...also in the UK!
 For me 90% of vids affected. Also can get round it by closing video and immediately reopening agaun or by clicking for the next video then going back. Interestingly if you click next video the next video always plays flawlessly as does the original if you go back....
 On one occasion I think I caught a fleeting glimpse of a skip add button just before the endless loading started."
-5692,1419674255,1290028930,None,I'm affected too... It (the video ) stops & starts buffering when the video playback reaches 9/10 seconds as a workaround I close the video & restart it again from history.
-5693,1419674255,1290127715,None,Same symptoms here. Also in UK. Solved by VPN. Non root using microG android 11. Closing the video and reopening it resumes playback as does using overlay controls to pick next video then going back to the original video.
-5694,1419674255,1290504230,None,"I'm posting with data sincerely trying to help and it's being marked as spam - inaccurate and hurtful.
+5692,2044991706,1290028930,None,I'm affected too... It (the video ) stops & starts buffering when the video playback reaches 9/10 seconds as a workaround I close the video & restart it again from history.
+5693,2044991706,1290127715,None,Same symptoms here. Also in UK. Solved by VPN. Non root using microG android 11. Closing the video and reopening it resumes playback as does using overlay controls to pick next video then going back to the original video.
+5694,2044991706,1290504230,None,"I'm posting with data sincerely trying to help and it's being marked as spam - inaccurate and hurtful.
 UK based. Same issue as stated in erroneously flagged messages. 90% videos affected. Fixed by VPN. Work around is close and restart videos.
 Android 11. Nonroot with MicroG. Works with any non UK VPN endpoint.
 Please don't flag this message as spam. It isnt. Trying to help the devs narrow this down and confirming there's an issue.
 Can prob be reproduced by connecting via a UK VPN endpoint and trying the app I'd imagine."
-5695,1419674255,1290607487,None,Your information is already posted on this issue and flagged as spam numerous times.
-5696,1419674255,1298081724,None,Temporal fix with commit 7aa3bce6ccd669a66de10ef6ffe2151f27b40365.
-5697,1419674255,1419674255,None,"### Type
+5695,2044991706,1290607487,None,Your information is already posted on this issue and flagged as spam numerous times.
+5696,2044991706,1298081724,None,Temporal fix with commit 7aa3bce6ccd669a66de10ef6ffe2151f27b40365.
+5697,2044991706,2044991706,None,"### Type
 Error at runtime
 ### Bug description
 When trying to watch YouTube videos in the UK ~1/4 of the videos I try and play get stuck ""loading"" / ""buffering"" indefinitely and will never start playing on their own. You can work around this buy skipping to the end of the video then using replay to restart playback which will start immediately. You can also use a VPN to load videos while connected to US server. ### Steps to reproduce
