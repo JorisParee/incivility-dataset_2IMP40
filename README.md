@@ -9,10 +9,10 @@ In the following, we briefly describe the different components that are included
 The project includes the following files and folders:
 
 - __/annotation_app__: A folder that contains the annotation interface we created using the `streamlit` library.
-    - app.py: The main app file. You have to run this file after deploying the server. To run this file: `streamlit run app.py`.
+    - app.py: The main app file. You have to run this file after deploying the server. To run this file: `python -m streamlit run app.py`.
     - database.py: This file contains the db queries for inserting, updating, or selecting various operations during the annotation period.
     - test_db.py: This creates the sample dummy data for hosting it on the server. Run this file once before running `app.py`. 
-    - requirements.txt: The libraries needed to run the app.
+    - requirements.txt: The libraries needed to run the app. use `pip install -r requirements.txt`
     - instructions.txt: The definitions of the TBDF, Trigger, Target and Consequence.
     - config.ini: The configuration file for different input files.
     - - __/screenshots__: A folder that contains screenshots of the annotation app in streamlit.
