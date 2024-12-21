@@ -25,6 +25,13 @@ The project includes the following files and folders:
     - annotated_issue_level.csv: CSV file that contains the issue-level annotation data. This file has 5 columns: `id`, `issue_id`, `trigger`, `target`, and `consequences`.
     - annotated_comment_level.csv: CSV file that contains the comment level annotation data. This file has 5 columns: `id`, `issue_id`, `comment_id`, `tbdf`, and `comment_body`.
 
+- __/retrieve_data__: A folder that contains the scripts for retrieving additional information for the data.
+  - database.py All functions relating accessing and inserting into a sql database
+  - git_api.py All function relating to calling the git api.
+  - main.py The actual logic for retrieving the correct data and saving it.
+  - init_db.py loads the csv files into the database. (make sure to run from withing the folder for relative paths.)
+  - test_db.py and test_api.py simple tests to see if the db and git api work.
+
 - GH_Archive_Query.sql: The SQL of the GH Archive we used for data collection.
 - openai_rating.ipynb: The Jupyter notebook where we run the GPT-4 prompts.
 

@@ -10,7 +10,7 @@ class Database:
                 issue_id INTEGER not null, \
                 comment_id INTEGER not null UNIQUE,\
                 tbdf TEXT not null,\
-                comment_body TEXT not null);"
+                comment_body TEXT);"
         )
         c.execute(
             "CREATE TABLE IF NOT EXISTS annotated_issues(id INTEGER PRIMARY KEY, \
@@ -31,7 +31,7 @@ class Database:
                 project_name TEXT not null, \
                 issue_id INTEGER not null, \
                 comment_id INTEGER not null, \
-                comment_body TEXT not null, \
+                comment_body TEXT, \
                 created_at TEXT not null, \
                 user_id INTEGER not null);"
         )
@@ -50,6 +50,28 @@ class Database:
         c.execute(
             "CREATE TABLE IF NOT EXISTS testing(id INTEGER PRIMARY KEY, \
                 text TEXT not null);"
+        )
+        c.execute(
+            "CREATE TABLE IF NOT EXISTS project_activity(id INTEGER PRIMARY KEY, \
+                project_id INTEGER not null, \
+                activity_id INTEGER not null, \
+                activity_type TEXT not null, \
+                user_id INTEGER not null, \
+                ref TEXT not null);"
+        )
+
+        c.execute(
+            "CREATE TABLE IF NOT EXISTS project_commits(id INTEGER PRIMARY KEY, \
+                project_name INTEGER not null, \
+                node_id TEXT not null, \
+                author_login TEXT, \
+                author_name TEXT not null, \
+                author_id INTEGER, \
+                committer_login TEXT, \
+                committer_name TEXT not null, \
+                committer_id INTEGER, \
+                message TEXT, \
+                verified_date TEXT not null);"
         )
 
     def select(self, sql, parameters=[]):
@@ -93,13 +115,13 @@ class Database:
 
     def insert_comments(self, project_name, issue_id, comment_id, comment_body, created_at, user_id):
         return self.execute(
-            "INSERT INTO annotated_comments (project_name, issue_id, comment_id, comment_body, created_at, user_id) VALUES (?, ?, ?, ? , ?, ?)",
+            "INSERT INTO comments (project_name, issue_id, comment_id, comment_body, created_at, user_id) VALUES (?, ?, ?, ? , ?, ?)",
             [project_name, issue_id, comment_id, comment_body, created_at, user_id],
         )
 
     def insert_issue_thread(self, issue_id, total_comments, url, issue_title):
         return self.execute(
-            "INSERT INTO annotated_comments (issue_id, total_comments, url, issue_title) VALUES (?, ?, ?, ?)",
+            "INSERT INTO issue_threads (issue_id, total_comments, url, issue_title) VALUES (?, ?, ?, ?)",
             [issue_id, total_comments, url, issue_title],
         )
 
@@ -109,6 +131,17 @@ class Database:
             [issue_id, project_id, project_name, nr_of_commits],
         )
 
+    def insert_commit(self, project_name, node_id, author_login, author_name, author_id, committer_login, committer_name, committer_id, message, verified_date):
+        return self.execute(
+            "INSERT INTO project_commits (project_name, node_id, author_login, author_name, author_id, committer_login, committer_name, committer_id, message, verified_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            [project_name, node_id, author_login, author_name, author_id, committer_login, committer_name, committer_id, message, verified_date],
+        )
+
+    def delete_commits_for_project(self, project_name):
+        return self.execute(
+            "DELETE FROM project_commits WHERE project_name = ?",
+            [project_name],
+        )
 
 
 
@@ -117,6 +150,13 @@ class Database:
     def get_all_annotated_issues(self):
         c = self.conn.cursor()
         data = c.execute("SELECT * FROM annotated_issues").fetchall()
+        # Get column names from the cursor description
+        columns = [column[0] for column in c.description]
+        return data, columns
+
+    def get_annotated_issue_by_id(self, issue_id):
+        c = self.conn.cursor()
+        data = c.execute("SELECT * FROM annotated_issues WHERE issue_id = ?", [issue_id]).fetchall()
         # Get column names from the cursor description
         columns = [column[0] for column in c.description]
         return data, columns
@@ -162,9 +202,32 @@ class Database:
         columns = [column[0] for column in c.description]
         return data, columns
 
+
+    def get_all_commits(self):
+        c = self.conn.cursor()
+        data = c.execute("SELECT * FROM project_commits").fetchall()
+        # Get column names from the cursor description
+        columns = [column[0] for column in c.description]
+        return data, columns
+
+    def get_commits_by_project(self, project_name):
+        c = self.conn.cursor()
+        data = c.execute("SELECT * FROM project_commits WHERE project_name = ?", [project_name]).fetchall()
+        # Get column names from the cursor description
+        columns = [column[0] for column in c.description]
+        return data, columns
+
+
     def get_all_issue_threads(self):
         c = self.conn.cursor()
         data = c.execute("SELECT * FROM issue_threads").fetchall()
+        # Get column names from the cursor description
+        columns = [column[0] for column in c.description]
+        return data, columns
+
+    def get_issue_thread_by_id(self, issue_id):
+        c = self.conn.cursor()
+        data = c.execute("SELECT * FROM issue_threads WHERE issue_id = ?",[issue_id]).fetchall()
         # Get column names from the cursor description
         columns = [column[0] for column in c.description]
         return data, columns
@@ -182,4 +245,3 @@ class Database:
         # Get column names from the cursor description
         columns = [column[0] for column in c.description]
         return data, columns
-
