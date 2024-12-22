@@ -40,7 +40,8 @@ def check_project_handled(project_name):
     data, columns = db.get_commits_by_project(project_name)
     return len(data) > 0
 
-def handle_commits_for_issue(issue_id):
+def handle_commits_for_issue(issue_id, runanyway = False):
+    print("started for issue: " + str(issue_id))
     issue, columns = db.get_issue_thread_by_id(issue_id)
     if (len(issue) == 0):
         print("No issues are found for id")
@@ -48,10 +49,20 @@ def handle_commits_for_issue(issue_id):
     url = issue[0][3]
     owner, repo = get_project_owner_and_name(url)
     if check_project_handled(f'{owner}/{repo}'):
-       print("project alrady handled")
-       db.delete_commits_for_project(f'{owner}/{repo}')
-    #else:
-    save_all_commits_for_project(owner, repo)
+       print("project already handled")
+       if runanyway:
+           print("deleting and rerunning anyway")
+           db.delete_commits_for_project(f'{owner}/{repo}')
+           save_all_commits_for_project(owner, repo)
+    else:
+        print("running project")
+        save_all_commits_for_project(owner, repo)
+    print("finished for issue: " + str(issue_id))
 
+def run_for_all_issues():
+    issues, columns = db.get_all_issue_threads()
+    for issue in issues:
+        handle_commits_for_issue(issue[columns.index("issue_id")], )
 
-handle_commits_for_issue(12894489)
+#handle_commits_for_issue(12894489)
+run_for_all_issues()

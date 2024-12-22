@@ -1,19 +1,41 @@
 import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv('../.env')
 
 def call_api(url):
+    result = []
+    url = url + '?per_page=100'
+    res = exec_api(url)
+    result += res.json()
+    next = [link[1:-13] for link in res.headers['Link'].split(',') if link.find('rel="next"') > 0]
+    while len(next) == 1:
+        print('getting next page' + next[0])
+        res = exec_api(next[0])
+        result += res.json()
+        next = [link[1:-13] for link in res.headers['Link'].split(',') if link.find('rel="next"') > 0]
+    return result
+
+gittoken = os.getenv('GITHUB_TOKEN')
+timeout = 0.8
+
+def exec_api(url):
     try:
         # Make a GET request to the API endpoint using requests.get()
-        response = requests.get(url)
+        headers = {'content-type': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Authorization': 'Bearer ' + gittoken}
+        response = requests.get(url, headers=headers)
 
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
-            res = response.json()
+            res = response
             return res
         else:
             print('Error:', response.status_code)
             return None
     except:
         return f'error: failed calling api for {url}'
+    sleep(0.72)
 
 def get_user(user_id):
     # Define the API endpoint URL
