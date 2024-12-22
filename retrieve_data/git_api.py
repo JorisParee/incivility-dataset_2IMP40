@@ -1,6 +1,7 @@
 import requests
 from dotenv import load_dotenv
 import os
+import time
 
 load_dotenv('../.env')
 
@@ -18,9 +19,10 @@ def call_api(url):
     return result
 
 gittoken = os.getenv('GITHUB_TOKEN')
-timeout = 0.8
+timeout = 720
 
 def exec_api(url):
+    epoch = int(time.time())
     try:
         # Make a GET request to the API endpoint using requests.get()
         headers = {'content-type': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Authorization': 'Bearer ' + gittoken}
@@ -35,7 +37,9 @@ def exec_api(url):
             return None
     except:
         return f'error: failed calling api for {url}'
-    sleep(0.72)
+    newepoch = int(time.time())
+    if(epoch + timeout > newepoch):
+        sleep((epoch+timeout) - newepoch)
 
 def get_user(user_id):
     # Define the API endpoint URL

@@ -85,6 +85,12 @@ class Database:
         self.conn.commit()
         return c.lastrowid
 
+    def executemany(self, sql, parameters=[]):
+        c = self.conn.cursor()
+        c.executemany(sql, parameters)
+        self.conn.commit()
+        return c.lastrowid
+
     def close(self):
         self.conn.close()
 
@@ -135,6 +141,15 @@ class Database:
         return self.execute(
             "INSERT INTO project_commits (project_name, node_id, author_login, author_name, author_id, committer_login, committer_name, committer_id, message, verified_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             [project_name, node_id, author_login, author_name, author_id, committer_login, committer_name, committer_id, message, verified_date],
+        )
+
+    def insert_commit_list(self, commit_list):
+        values = []
+        for commit in commit_list:
+            values.append(tuple(commit))
+        return self.executemany(
+            "INSERT INTO project_commits (project_name, node_id, author_login, author_name, author_id, committer_login, committer_name, committer_id, message, verified_date) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            values
         )
 
     def delete_commits_for_project(self, project_name):

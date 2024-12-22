@@ -6,6 +6,10 @@ db = Database(DATABASE_PATH)
 
 
 def save_single_commit(commit, project_id):
+
+    db.insert_commit([x for x in parse_single_commit(commit, project_id)])
+
+def parse_single_commit(commit, project_id):
     authorlogin, authorid, committerlogin, committorid = None, None, None, None
     if (commit['author'] != None):
         authorlogin = commit['author']['login']
@@ -15,7 +19,7 @@ def save_single_commit(commit, project_id):
         committerlogin = commit['committer']['login']
         committorid = commit['committer']['id']
 
-    db.insert_commit(
+    return[
         project_id,
         commit['node_id'],
         authorlogin or None,
@@ -24,16 +28,19 @@ def save_single_commit(commit, project_id):
         committerlogin or None,
         commit['commit']['committer']['name'],
         committorid or None,
-        commit.get('message', None),
+        commit['commit'].get('message', None),
         commit['commit']['verification']['verified_at'] or commit['commit']['author']['date'],
-    )
+    ]
 
 
 
 def save_all_commits_for_project(owner, repo):
     commits = get_repository_commits(owner, repo)
+    commit_values = []
     for commit in commits:
-        save_single_commit(commit, f'{owner}/{repo}')
+        #save_single_commit(commit, f'{owner}/{repo}')
+        commit_values.append(parse_single_commit(commit, f'{owner}/{repo}'))
+    db.insert_commit_list(commit_values)
     print("Saved all commits for" + f'{owner}/{repo}')
 
 def check_project_handled(project_name):
@@ -64,5 +71,5 @@ def run_for_all_issues():
     for issue in issues:
         handle_commits_for_issue(issue[columns.index("issue_id")], )
 
-#handle_commits_for_issue(12894489)
-run_for_all_issues()
+handle_commits_for_issue(12894489, True)
+#run_for_all_issues()
