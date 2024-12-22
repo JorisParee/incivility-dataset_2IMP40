@@ -1,3 +1,5 @@
+import time
+
 from git_api import *
 from database import Database
 
@@ -48,7 +50,7 @@ def check_project_handled(project_name):
     return len(data) > 0
 
 def handle_commits_for_issue(issue_id, runanyway = False):
-    print("started for issue: " + str(issue_id))
+    print("started for issue: " + str(issue_id) + " at time: " + str(time.ctime()))
     issue, columns = db.get_issue_thread_by_id(issue_id)
     if (len(issue) == 0):
         print("No issues are found for id")
@@ -71,5 +73,5 @@ def run_for_all_issues():
     for issue in issues:
         handle_commits_for_issue(issue[columns.index("issue_id")], )
 
-handle_commits_for_issue(12894489, True)
-#run_for_all_issues()
+#handle_commits_for_issue(12894489, True)
+run_for_all_issues()
