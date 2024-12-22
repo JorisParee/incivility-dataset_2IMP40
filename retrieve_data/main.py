@@ -13,11 +13,11 @@ def save_single_commit(commit, project_id):
 
 def parse_single_commit(commit, project_id):
     authorlogin, authorid, committerlogin, committorid = None, None, None, None
-    if (commit['author'] != None):
+    if (not commit['author'] is None and commit['author'] != {}):
         authorlogin = commit['author']['login']
         authorid = commit['author']['id']
 
-    if (commit['committer'] != None):
+    if (not commit['committer'] is None and commit['committer'] != {}):
         committerlogin = commit['committer']['login']
         committorid = commit['committer']['id']
 
@@ -64,7 +64,7 @@ def handle_commits_for_issue(issue_id, runanyway = False):
            db.delete_commits_for_project(f'{owner}/{repo}')
            save_all_commits_for_project(owner, repo)
     else:
-        print("running project")
+        print("running project" + f'{owner}/{repo}')
         save_all_commits_for_project(owner, repo)
     print("finished for issue: " + str(issue_id))
 
