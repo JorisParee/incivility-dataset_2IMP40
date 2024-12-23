@@ -1,4 +1,5 @@
 import time
+import random
 
 from git_api import *
 from database import Database
@@ -74,4 +75,22 @@ def run_for_all_issues():
         handle_commits_for_issue(issue[columns.index("issue_id")], )
 
 #handle_commits_for_issue(12894489, True)
-run_for_all_issues()
+#run_for_all_issues()
+
+
+def randomness_list(n):
+    new = list(range(n))
+    random.shuffle(new)
+    list_res = []
+    for i in range(n):
+        list_res.append([new[i], i])
+    return list_res
+
+def add_random_to_issue_threads(new_column):
+    idcol = 'id'
+    issue_thread_list = db.get_all_issue_threads()
+    highest = max(list(map(lambda x: x[issue_thread_list[1].index(idcol)],issue_thread_list[0])))
+    replace = randomness_list(highest)
+    db.add_column_with_number('issue_threads', idcol, new_column, replace)
+
+add_random_to_issue_threads('random_sampling_int')

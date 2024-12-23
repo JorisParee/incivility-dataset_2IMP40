@@ -158,6 +158,17 @@ class Database:
             [project_name],
         )
 
+    def add_column_with_number(self, table_name, id_column_name, add_column_name, values):
+        try:
+            self.execute("ALTER TABLE " + table_name + " ADD COLUMN "+add_column_name+" INTEGER default null");
+        except Exception as e:
+            print( "Altering " + table_name )
+            print(e)
+
+        return self.executemany(
+            f"UPDATE {table_name} SET {add_column_name} = ? WHERE {id_column_name} = ?",
+            values
+        )
 
 
 
