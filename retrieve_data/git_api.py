@@ -19,7 +19,7 @@ def call_api(url):
     return result
 
 gittoken = os.getenv('GITHUB_TOKEN')
-timeout = 720
+timeout = 0.720
 
 def exec_api(url):
     epoch = int(time.time())
@@ -31,15 +31,16 @@ def exec_api(url):
         # Check if the request was successful (status code 200)
         if response.status_code == 200:
             res = response
+            newepoch = int(time.time())
+            if (epoch + timeout > newepoch):
+                time.sleep((epoch + timeout) - newepoch)
             return res
         else:
             print('Error:', response.status_code)
             return None
     except:
         return f'error: failed calling api for {url}'
-    newepoch = int(time.time())
-    if(epoch + timeout > newepoch):
-        sleep((epoch+timeout) - newepoch)
+
 
 def get_user(user_id):
     # Define the API endpoint URL
