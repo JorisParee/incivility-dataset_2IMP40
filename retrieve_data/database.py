@@ -165,6 +165,13 @@ class Database:
             print( "Altering " + table_name )
             print(e)
 
+    def add_column_with_text(self, table_name, id_column_name, add_column_name, values):
+        try:
+            self.execute("ALTER TABLE " + table_name + " ADD COLUMN " + add_column_name + " TEXT default null");
+        except Exception as e:
+            print("Altering " + table_name)
+            print(e)
+
         return self.executemany(
             f"UPDATE {table_name} SET {add_column_name} = ? WHERE {id_column_name} = ?",
             values

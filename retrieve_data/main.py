@@ -93,4 +93,17 @@ def add_random_to_issue_threads(new_column):
     replace = randomness_list(highest)
     db.add_column_with_number('issue_threads', idcol, new_column, replace)
 
-add_random_to_issue_threads('random_sampling_int')
+#add_random_to_issue_threads('random_sampling_int')
+
+def add_project_name_to_issue_thread():
+    idcol = 'id'
+    addcol = 'project_name'
+    issue_thread_list = db.get_all_issue_threads()
+    values = []
+    for issue in issue_thread_list[0]:
+        owner, repo = get_project_owner_and_name(issue[issue_thread_list[1].index('url')])
+        projname = f'{owner}/{repo}'
+        values.append([projname, issue[issue_thread_list[1].index(idcol)]])
+    db.add_column_with_text('issue_threads', idcol, addcol, values)
+
+add_project_name_to_issue_thread()
