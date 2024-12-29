@@ -75,7 +75,7 @@ def run_for_all_issues():
         handle_commits_for_issue(issue[columns.index("issue_id")], )
 
 #handle_commits_for_issue(12894489, True)
-#run_for_all_issues()
+run_for_all_issues()
 
 
 def randomness_list(n):
@@ -106,4 +106,4 @@ def add_project_name_to_issue_thread():
         values.append([projname, issue[issue_thread_list[1].index(idcol)]])
     db.add_column_with_text('issue_threads', idcol, addcol, values)
 
-add_project_name_to_issue_thread()
+##add_project_name_to_issue_thread()
