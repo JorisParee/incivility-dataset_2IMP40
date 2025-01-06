@@ -14,7 +14,7 @@ COMMITSJOINEDQUERYHALFYEAR AS (
     WHERE DATE(commits_before.startDate, '-6 month') <= commits_before.verified_date
 )
 
-SELECT issue.*, c.count_before, c2.count_halfyear FROM ISSUETHREADINFO issue
+SELECT issue.*, c.count_before, c2.count_halfyear, c3.count_contributers_before, c4.count_contributers_halfyear FROM ISSUETHREADINFO issue
 LEFT JOIN (
     SELECT issue_id, COUNT(commits.committer_id) AS count_before FROM COMMITSJOINEDQUERYBEFORE commits
     GROUP BY commits.issue_id
@@ -22,7 +22,15 @@ LEFT JOIN (
 LEFT JOIN (
     SELECT issue_id, COUNT(commits.committer_id) AS count_halfyear FROM COMMITSJOINEDQUERYHALFYEAR commits
     GROUP BY commits.issue_id
-) c2 ON issue.issue_id = c2.issue_id;
+) c2 ON issue.issue_id = c2.issue_id
+LEFT JOIN (
+    SELECT issue_id, COUNT(distinct commits.committer_id) AS count_contributers_before FROM COMMITSJOINEDQUERYBEFORE commits
+    GROUP BY commits.issue_id
+) c3 ON issue.issue_id = c3.issue_id
+LEFT JOIN (
+    SELECT issue_id, COUNT(distinct commits.committer_id) AS count_contributers_halfyear FROM COMMITSJOINEDQUERYHALFYEAR commits
+    GROUP BY commits.issue_id
+) c4 ON issue.issue_id = c4.issue_id;
 
 
 
