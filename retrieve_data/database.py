@@ -9,15 +9,15 @@ class Database:
             "CREATE TABLE IF NOT EXISTS annotated_comments(id INTEGER PRIMARY KEY, \
                 issue_id INTEGER not null, \
                 comment_id INTEGER not null UNIQUE,\
-                tbdf TEXT not null,\
+                tbdf TEXT,\
                 comment_body TEXT);"
         )
         c.execute(
             "CREATE TABLE IF NOT EXISTS annotated_issues(id INTEGER PRIMARY KEY, \
-                issue_id INTEGER not null, \
-                trigger TEXT not null, \
-                target TEXT not null, \
-                consequences TEXT not null);"
+                issue_id INTEGER not null UNIQUE, \
+                trigger TEXT, \
+                target TEXT, \
+                consequences TEXT);"
         )
         c.execute(
             "CREATE TABLE IF NOT EXISTS issue_threads(id INTEGER PRIMARY KEY, \
@@ -30,7 +30,7 @@ class Database:
             "CREATE TABLE IF NOT EXISTS comments(id INTEGER PRIMARY KEY, \
                 project_name TEXT not null, \
                 issue_id INTEGER not null, \
-                comment_id INTEGER not null, \
+                comment_id INTEGER not null UNIQUE, \
                 comment_body TEXT, \
                 created_at TEXT not null, \
                 user_id INTEGER not null);"
@@ -109,7 +109,7 @@ class Database:
 
     def insert_annotated_issue(self, issue_id, trigger, target, consequences):
         return self.execute(
-            "INSERT INTO annotated_comments (issue_id, trigger, target, consequences) VALUES (?, ?, ?, ?)",
+            "INSERT INTO annotated_issues (issue_id, trigger, target, consequences) VALUES (?, ?, ?, ?)",
             [issue_id, trigger, target, consequences],
         )
 
