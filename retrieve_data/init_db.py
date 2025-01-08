@@ -32,5 +32,17 @@ try:
 except Exception as e:
     print(e)
 
+try:
+    for idx, annotated_comment in df_comments_annotated.iterrows():
+        db.insert_annotated_comments(annotated_comment['issue_id'], annotated_comment['comment_id'], annotated_comment['tbdf'], annotated_comment['comment_body'])
+except Exception as e:
+    print(e)
+
+try:
+    for idx, annotated_issue in df_issues_annotated.iterrows():
+        db.insert_annotated_issue(annotated_issue['issue_id'], annotated_issue['trigger'], annotated_issue['target'], 'consequences')
+except Exception as e:
+    print(e)
+
 print("#issue threads: " + str(len(db.get_all_issue_threads()[0])))
 print("#comments: " + str(len(db.get_all_comments()[0])))
